@@ -8,6 +8,8 @@
 
   <meta name="keywords" content="instalação de câmeras, CFTV Florianópolis, instalação de alarmes, câmeras de segurança">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -36,9 +38,18 @@
       background: rgba(0,0,0,0.65);
     }
 
+      .hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:radial-gradient(circle at center, rgba(255,0,0,0.2), transparent 70%);
+z-index:0;
+}
+
     .hero-content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
     .hero h1 {
@@ -51,15 +62,20 @@
       margin-bottom: 20px;
     }
 
-    .btn {
-      background: #25d366;
-      color: #fff;
-      padding: 14px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+   .btn{
+background:linear-gradient(45deg,#25d366,#22c55e);
+color:#fff;
+padding:14px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
 
+.btn:hover{
+transform:scale(1.05);
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
     /* NAV */
     nav {
       background: #8b0000;
@@ -101,13 +117,14 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-
-  .card {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+.card {
+background:#f9f9f9;
+padding:20px;
+border-radius:10px;
+text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:transform 0.3s, box-shadow 0.3s, opacity 0.6s;
 }
 
 .card:hover {
@@ -197,26 +214,31 @@
   <div class="grid">
 
     <div class="card">
-      <h3>Instalação de CFTV</h3>
+<i class="fas fa-video" style="font-size:30px;color:#8b0000;"></i>
+<h3>Instalação de CFTV</h3>
       <p>Instalação completa de câmeras HD, Full HD e IP para residências e empresas.</p>
     </div>
 
     <div class="card">
+<i class="fas fa-bell" style="font-size:30px;color:#8b0000;"></i>
       <h3>Instalação de Alarmes</h3>
       <p>Sistemas de alarme com sensores de movimento e abertura para maior segurança.</p>
     </div>
 
     <div class="card">
-      <h3>Montagem de Rede</h3>
+ <i class="fas fa-network-wired" style="font-size:30px;color:#8b0000;"></i>
+        <h3>Montagem de Rede</h3>
       <p>Instalação de cabos de rede, pontos de internet e organização de cabeamento.</p>
     </div>
 
     <div class="card">
+ <i class="fas fa-wifi" style="font-size:30px;color:#8b0000;"></i>       
       <h3>Configuração de Rede</h3>
       <p>Configuração de roteadores, IP e acesso remoto para câmeras.</p>
     </div>
 
     <div class="card">
+<i class="fas fa-tools" style="font-size:30px;color:#8b0000;"></i>       
       <h3>Estruturas para Câmeras</h3>
       <p>Montagem de suportes e estruturas para instalação segura de câmeras.</p>
     </div>
@@ -326,6 +348,23 @@ Falar no WhatsApp
 </footer>
 
 <a class="whatsapp-btn" href="https://wa.me/5548985060500">💬 WhatsApp</a>
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+
+    if(top < trigger){
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }
+  });
+});
+</script>
 
 </body>
 </html>
