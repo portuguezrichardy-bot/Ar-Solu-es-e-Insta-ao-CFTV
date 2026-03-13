@@ -12,6 +12,45 @@
 
 <style>
 
+.modal{
+display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+z-index:999;
+}
+
+.modal-box{
+background:#fff;
+width:400px;
+margin:8% auto;
+padding:30px;
+border-radius:15px;
+text-align:center;
+animation:zoom 0.4s;
+}
+
+.modal-box img{
+width:220px;
+margin-bottom:15px;
+}
+
+.close{
+position:absolute;
+right:20px;
+top:15px;
+font-size:22px;
+cursor:pointer;
+}
+
+@keyframes zoom{
+from{transform:scale(0.5)}
+to{transform:scale(1)}
+}
+
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
@@ -250,11 +289,19 @@ gap:30px;
 }
 
 .item{
-background:#fff;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
+background:linear-gradient(145deg,#ffffff,#f1f1f1);
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 text-align:center;
 padding:20px;
+transition:transform 0.4s, box-shadow 0.4s;
+cursor:pointer;
+perspective:1000px;
+}
+
+.item:hover{
+transform:rotateX(5deg) rotateY(-5deg) scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.35);
 }
 
 .item img{
@@ -431,40 +478,55 @@ Ver Serviços
   <h2>Catálogo de Produtos</h2>
   <div class="catalogo">
 
-    <div class="item">
+    <div class="item" onclick="abrirProduto('bullet')">
       <img src="camara bullet.jpg">
       <h3>Câmera Bullet HD</h3>
       <p>Visão noturna • Externa</p>
       <a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
     </div>
 
-    <div class="item">
+    <div class="item" onclick="abrirProduto('domi')">
       <img src="camara domi.png">
       <h3>Câmera Domo</h3>
       <p>Design discreto • Interna • Externa</p>
       <a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
     </div>
 
-    <div class="item">
+    <div class="item" onclick="abrirProduto('dvr')">
       <img src="dvr.jpg">
       <h3>DVR / NVR</h3>
       <p>Acesso remoto</p>
     <a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
     </div>
 
-    <div class="item">
+    <div class="item" onclick="abrirProduto('cftv')">
       <img src="kit cftv.jpg">
       <h3>Kit CFTV</h3>
       <p>Completo</p>
      <a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
     </div>
 
-    <div class="item">
+    <div class="item" onclick="abrirProduto('alarme')">
       <img src="alarme.jpg">
       <h3>Sistema de Alarme</h3>
       <p>Sensores • Sirene</p>
      <a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
     </div>
+
+    <div class="item" onclick="abrirProduto('rede')">
+
+<img src="rede.jpeg">
+<h3>Infraestrutura de Rede</h3>
+<p>Cabeamento estruturado</p>
+<a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
+</div>
+
+<div class="item" onclick="abrirProduto('rack')">
+<img src="rack.jpg">
+<h3>Montagem de Rack</h3>
+<p>Organização profissional</p>
+<a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
+</div>
 
   </div>
 </section>
@@ -521,6 +583,69 @@ Falar no WhatsApp
 <a class="whatsapp-btn" href="https://wa.me/5548985060500">💬 WhatsApp</a>
 
 <script>
+
+window.onclick = function(event){
+const modal = document.getElementById("produtoModal");
+if(event.target === modal){
+modal.style.display="none";
+}
+}    
+
+function abrirProduto(tipo){
+
+let img = document.getElementById("produtoImg")
+let titulo = document.getElementById("produtoTitulo")
+let desc = document.getElementById("produtoDesc")
+
+if(tipo==="bullet"){
+img.src="camara bullet.jpg"
+titulo.innerText="Câmera Bullet HD"
+desc.innerText="Sistema profissional de vigilância com visão noturna e alta definição. Ideal para proteção de residências, empresas e estacionamentos."
+}
+
+if(tipo==="domi"){
+img.src="camara domi.png"
+titulo.innerText="Câmera Domo"
+desc.innerText="Câmera discreta com alta qualidade de imagem e excelente desempenho em ambientes internos e externos."
+}
+
+if(tipo==="dvr"){
+img.src="dvr.jpg"
+titulo.innerText="DVR / NVR"
+desc.innerText="Gravador digital para câmeras de segurança com acesso remoto pelo celular."
+}
+
+if(tipo==="cftv"){
+img.src="kit cftv.jpg"
+titulo.innerText="Kit CFTV Completo"
+desc.innerText="Sistema completo de segurança com câmeras, DVR, cabos e fonte de alimentação."
+}
+
+if(tipo==="alarme"){
+img.src="alarme.jpg"
+titulo.innerText="Sistema de Alarme"
+desc.innerText="Sistema de proteção com sensores de movimento, abertura e sirene de alta potência."
+}
+
+if(tipo==="rede"){
+img.src="rede.jpeg"
+titulo.innerText="Infraestrutura de Rede"
+desc.innerText="Instalação profissional de cabeamento estruturado, pontos de rede, patch panel e organização de cabos para empresas e residências."
+}
+
+if(tipo==="rack"){
+img.src="rack.jpg"
+titulo.innerText="Montagem de Rack"
+desc.innerText="Montagem e organização de racks de rede com patch panel, switch, DVR/NVR e gerenciamento profissional de cabos."
+}
+
+document.getElementById("produtoModal").style.display="block"
+}
+
+function fecharProduto(){
+document.getElementById("produtoModal").style.display="none"
+}
+
 const cards = document.querySelectorAll(".card");
 
 window.addEventListener("scroll", () => {
@@ -535,7 +660,28 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
 </script>
+
+<div id="produtoModal" class="modal">
+
+<div class="modal-box">
+
+<span class="close" onclick="fecharProduto()">✖</span>
+
+<img id="produtoImg">
+
+<h2 id="produtoTitulo"></h2>
+
+<p id="produtoDesc"></p>
+
+<a class="btn" href="https://wa.me/5548985060500">
+Solicitar Orçamento
+</a>
+
+</div>
+
+</div>
 
 </body>
 </html>
