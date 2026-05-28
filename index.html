@@ -1,687 +1,975 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0a" />
+<title>AR Soluções CFTV | Câmeras, Alarmes, Redes e Elétrica em Florianópolis</title>
+<meta name="description" content="Soluções completas em CFTV, alarmes, controle de acesso, redes, automação e instalações elétricas em Florianópolis e região. Atendimento residencial, comercial e condominial." />
+<meta name="keywords" content="CFTV Florianópolis, câmeras de segurança, alarmes, controle de acesso, automação residencial, instalações elétricas, condomínios, portaria remota, redes estruturadas, cerca elétrica" />
+<meta name="author" content="AR Soluções CFTV" />
+<link rel="canonical" href="https://www.arsolucoescftv.com.br/" />
 
-<title>A.R Soluções CFTV | Instalação de Câmeras e Alarmes em Florianópolis</title>
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:title" content="AR Soluções CFTV | Tecnologia em Segurança e Elétrica" />
+<meta property="og:description" content="CFTV, alarmes, controle de acesso, redes, automação e instalações elétricas em Florianópolis. Soluções para residências, empresas e condomínios." />
+<meta property="og:url" content="https://www.arsolucoescftv.com.br/" />
+<meta property="og:image" content="https://www.arsolucoescftv.com.br/img/logo-shield.png" />
+<meta name="twitter:card" content="summary_large_image" />
 
-<meta name="description" content="Instalação profissional de câmeras de segurança CFTV, alarmes e redes em Florianópolis. Soluções completas para residências, empresas e condomínios.">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" href="/img/logo-shield.png" />
+<link rel="apple-touch-icon" href="/img/logo-shield.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "AR Soluções CFTV",
+  "image": "https://www.arsolucoescftv.com.br/img/logo-shield.png",
+  "logo": "https://www.arsolucoescftv.com.br/img/logo-shield.png",
+  "email": "ar.solucoescftv@gmail.com",
+  "url": "https://www.arsolucoescftv.com.br/",
+  "telephone": "+55-48-98506-0500",
+  "priceRange": "$$",
+  "areaServed": ["Florianópolis","São José","Palhoça","Biguaçu","Grande Florianópolis"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Florianópolis",
+    "addressRegion": "SC",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  }],
+  "sameAs": ["https://wa.me/5548985060500"]
+}
+</script>
 
 <style>
-
-.modal{
-display:none;
-position:fixed;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-z-index:999;
+/* ===== Tokens ===== */
+:root{
+  --red:#e10600;
+  --red-600:#c10500;
+  --red-glow:rgba(225,6,0,.35);
+  --black:#0a0a0a;
+  --ink:#111315;
+  --panel:#15171a;
+  --panel-2:#1c1f23;
+  --line:rgba(255,255,255,.08);
+  --line-strong:rgba(255,255,255,.14);
+  --text:#e9eaec;
+  --muted:#9aa0a6;
+  --white:#ffffff;
+  --wa:#25d366;
+  --radius:16px;
+  --radius-lg:22px;
+  --shadow:0 20px 60px rgba(0,0,0,.45);
+  --container:1180px;
 }
 
-.modal-box{
-background:#fff;
-width:400px;
-margin:8% auto;
-padding:30px;
-border-radius:15px;
-text-align:center;
-animation:zoom 0.4s;
-}
-
-.modal-box img{
-width:220px;
-margin-bottom:15px;
-}
-
-.close{
-position:absolute;
-right:20px;
-top:15px;
-font-size:22px;
-cursor:pointer;
-}
-
-@keyframes zoom{
-from{transform:scale(0.5)}
-to{transform:scale(1)}
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f4f4f4;
-color:#222;
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:var(--black);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
-
-/* HERO */
-
-.hero{
-background:url("camaras.jpg") center/cover no-repeat;
-height:70vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
-position:relative;
-padding:40px;
-box-shadow: inset 0 0 120px rgba(255,0,0,0.2);
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.01em;color:var(--white);margin:0 0 .5em}
+h1{font-size:clamp(2rem,4.6vw,3.6rem);line-height:1.05;font-weight:700}
+h2{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.15;font-weight:700}
+h3{font-size:1.15rem;font-weight:600}
+p{line-height:1.65;color:var(--muted);margin:0 0 1em}
+.container{max-width:var(--container);margin:0 auto;padding:0 22px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--red);background:rgba(225,6,0,.08);
+  border:1px solid rgba(225,6,0,.25);
+  padding:6px 12px;border-radius:999px;
 }
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(225,6,0,.2)}
+.section{padding:96px 0;position:relative}
+.section--alt{background:linear-gradient(180deg,#0c0d0f 0%,#0a0a0a 100%)}
+.section-head{max-width:760px;margin:0 auto 56px;text-align:center}
+.section-head p{font-size:1.05rem}
 
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.65);
+/* ===== Top bar ===== */
+.topbar{
+  background:#000;border-bottom:1px solid var(--line);
+  font-size:.82rem;color:var(--muted);
 }
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.topbar a{color:var(--muted)}
+.topbar a:hover{color:var(--white)}
+.topbar .dot{display:inline-block;width:6px;height:6px;background:#22c55e;border-radius:50%;margin-right:6px;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
 
-.scan-line{
-position:absolute;
-width:100%;
-height:3px;
-background:rgba(255,0,0,0.6);
-top:0;
-animation:scan 6s linear infinite;
-z-index:1;
-pointer-events:none;
+/* ===== Header ===== */
+.header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,10,10,.78);
+  backdrop-filter:saturate(140%) blur(14px);
+  -webkit-backdrop-filter:saturate(140%) blur(14px);
+  border-bottom:1px solid var(--line);
 }
-
-@keyframes scan{
-0%{top:-10%;opacity:0;}
-10%{opacity:1;}
-90%{opacity:1;}
-100%{top:110%;opacity:0;}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;font-family:'Space Grotesk';font-weight:700;color:#fff;font-size:1.15rem;letter-spacing:.02em}
+.logo-mark{
+  width:44px;height:44px;border-radius:10px;display:grid;place-items:center;
+  background:transparent;overflow:hidden;
+  filter:drop-shadow(0 8px 18px rgba(225,6,0,.45));
 }
-
-.tech-overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:radial-gradient(circle at center, rgba(255,0,0,0.3), transparent 70%);
-animation:pulse 6s infinite;
+.logo-mark img{width:100%;height:100%;object-fit:contain;display:block}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{
+  color:var(--text);padding:10px 14px;border-radius:10px;font-weight:500;font-size:.94rem;
+  transition:.2s background, .2s color;
 }
-
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.2)}
-100%{transform:scale(1)}
-}
-
-.tech-lines{
-position:absolute;
-width:100%;
-height:100%;
-background-image:
-linear-gradient(rgba(255,0,0,0.1) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,0,0,0.1) 1px, transparent 1px);
-background-size:40px 40px;
-animation:moveLines 20s linear infinite;
-opacity:0.4;
-pointer-events:none;
-}
-
-@keyframes moveLines{
-0%{background-position:0 0;}
-100%{background-position:200px 200px;}
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-}
-
-.hero h1{
-font-size:2.8rem;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:1.2rem;
-margin-bottom:20px;
-}
-
-/* BUTTONS */
-
-.hero-buttons{
-margin-top:20px;
-display:flex;
-gap:15px;
-justify-content:center;
-}
-
+.nav-links a:hover{background:rgba(255,255,255,.05);color:#fff}
+.nav-cta{display:flex;align-items:center;gap:10px}
 .btn{
-background:linear-gradient(45deg,#25d366,#22c55e);
-color:#fff;
-padding:14px 30px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-position:relative;
-overflow:hidden;
+  display:inline-flex;align-items:center;gap:10px;
+  padding:13px 22px;border-radius:999px;font-weight:600;font-size:.95rem;
+  transition:transform .2s, box-shadow .2s, background .2s, border-color .2s;
+  border:1px solid transparent;cursor:pointer;line-height:1;white-space:nowrap;
 }
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(225,6,0,.35)}
+.btn-primary:hover{background:var(--red-600);transform:translateY(-2px);box-shadow:0 16px 32px rgba(225,6,0,.45)}
+.btn-wa{background:var(--wa);color:#0b1f12;box-shadow:0 10px 24px rgba(37,211,102,.3)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(37,211,102,.4)}
+.btn-ghost{background:rgba(255,255,255,.04);color:#fff;border-color:var(--line-strong)}
+.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25)}
+.btn-dark{background:#000;color:#fff;border-color:var(--line-strong)}
+.btn-dark:hover{background:#111}
+.hamburger{display:none;background:none;border:0;color:#fff;width:44px;height:44px;border-radius:10px;align-items:center;justify-content:center}
+.hamburger:hover{background:rgba(255,255,255,.06)}
 
-.btn::after{
-content:"";
-position:absolute;
-top:0;
-left:-100%;
-width:100%;
-height:100%;
-background:linear-gradient(120deg,transparent,rgba(255,255,255,0.5),transparent);
-transition:0.6s;
+/* ===== Hero ===== */
+.hero{
+  position:relative;overflow:hidden;
+  padding:96px 0 110px;
+  background:
+    radial-gradient(1100px 520px at 80% -10%, rgba(225,6,0,.28), transparent 60%),
+    radial-gradient(800px 500px at 0% 110%, rgba(225,6,0,.12), transparent 60%),
+    linear-gradient(180deg,#0a0a0a 0%,#0d0e10 100%);
 }
-
-.btn:hover::after{
-left:100%;
+.hero-grid{
+  position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:46px 46px;
+  mask-image:radial-gradient(ellipse at center, #000 35%, transparent 80%);
 }
-
-.btn:hover{
-transform:scale(1.05);
-box-shadow:0 8px 20px rgba(0,0,0,0.4);
+.hero-scan{
+  position:absolute;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--red),transparent);
+  filter:blur(.5px);opacity:.55;
+  animation:scan 7s linear infinite;pointer-events:none;
 }
+@keyframes scan{0%{top:-2%}100%{top:102%}}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.hero h1 span{color:var(--red)}
+.hero-lede{font-size:1.13rem;max-width:560px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-trust{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}
+.hero-trust div{display:flex;align-items:center;gap:8px}
+.hero-trust svg{width:18px;height:18px;color:var(--red)}
 
-.btn-secondary{
-background:#8b0000;
-color:#fff;
-padding:14px 30px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
+.hero-visual{
+  position:relative;border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--line-strong);
+  box-shadow:var(--shadow);
+  aspect-ratio:5/4;
+  background:#000;
 }
-
-.btn-secondary:hover{
-background:#a30000;
-transform:scale(1.05);
+.hero-visual img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.hero-visual::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.7) 100%),
+             radial-gradient(circle at 30% 30%, rgba(225,6,0,.25), transparent 55%);
 }
-
-/* NAV */
-
-nav{
-background:#8b0000;
-padding:15px;
-text-align:center;
-position:sticky;
-top:0;
-z-index:100;
+.hero-chip{
+  position:absolute;z-index:2;background:rgba(10,10,10,.78);
+  border:1px solid var(--line-strong);backdrop-filter:blur(10px);
+  border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:center;
+  color:#fff;font-size:.85rem;font-weight:500;
+  box-shadow:0 12px 30px rgba(0,0,0,.5);
 }
+.hero-chip svg{width:18px;height:18px;color:var(--red)}
+.hero-chip.c1{top:18px;left:18px}
+.hero-chip.c2{bottom:18px;right:18px}
+.hero-chip .live{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.25);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.4}}
 
-nav a{
-color:#fff;
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
-position:relative;
-padding-bottom:5px;
-}
+/* ===== Logos / trust strip ===== */
+.strip{padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0c0d0f}
+.strip-row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center}
+.strip-row div{font-size:.85rem;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:10px}
+.strip-row svg{width:20px;height:20px;color:var(--red)}
+.strip-row strong{color:#fff;font-weight:600}
 
-nav a::after{
-content:"";
-position:absolute;
-width:0;
-height:2px;
-background:#fff;
-left:0;
-bottom:0;
-transition:0.3s;
-}
-
-nav a:hover::after{
-width:100%;
-}
-
-/* SECTIONS */
-
-section{
-background:#fff;
-max-width:1100px;
-margin:40px auto;
-padding:40px 30px;
-border-radius:10px;
-}
-
-section h2{
-text-align:center;
-color:#8b0000;
-margin-bottom:30px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+/* ===== Cards / grids ===== */
+.grid{display:grid;gap:18px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
 
 .card{
-background:#f9f9f9;
-padding:20px;
-border-radius:12px;
-text-align:center;
-opacity:0;
-transform:translateY(40px);
-transition:transform 0.3s, box-shadow 0.3s, opacity 0.6s;
-border:1px solid #eee;
+  position:relative;background:linear-gradient(180deg,var(--panel) 0%,var(--panel-2) 100%);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;transition:transform .25s, border-color .25s, box-shadow .25s;
+  overflow:hidden;
+}
+.card::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(420px 120px at var(--mx,30%) -10%, rgba(225,6,0,.18), transparent 60%);
+  opacity:0;transition:.3s opacity;
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(225,6,0,.35);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.card:hover::before{opacity:1}
+.card .ico{
+  width:46px;height:46px;border-radius:12px;display:grid;place-items:center;
+  background:linear-gradient(135deg,rgba(225,6,0,.18),rgba(225,6,0,.04));
+  border:1px solid rgba(225,6,0,.25);color:var(--red);margin-bottom:16px;
+}
+.card .ico svg{width:22px;height:22px}
+.card h3{color:#fff;margin-bottom:6px}
+.card p{margin:0;font-size:.93rem}
+.card.elec .ico{
+  background:linear-gradient(135deg,rgba(255,210,80,.16),rgba(225,6,0,.06));
+  border-color:rgba(255,210,80,.3);color:#ffce4d;
+}
+.card .tag{
+  position:absolute;top:14px;right:14px;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 9px;border-radius:999px;border:1px solid var(--line-strong);color:var(--muted);background:rgba(0,0,0,.3);
+}
+.card.elec .tag{color:#ffce4d;border-color:rgba(255,210,80,.35);background:rgba(255,210,80,.08)}
+.card.cftv .tag{color:var(--red);border-color:rgba(225,6,0,.35);background:rgba(225,6,0,.08)}
+
+/* ===== Service category split ===== */
+.cat-tabs{
+  display:inline-flex;background:var(--panel);border:1px solid var(--line);
+  padding:6px;border-radius:999px;margin:0 auto 36px;
+}
+.cat-tabs button{
+  background:transparent;border:0;color:var(--muted);padding:10px 18px;border-radius:999px;
+  font-weight:600;font-size:.9rem;cursor:pointer;transition:.2s;
+}
+.cat-tabs button.active{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(225,6,0,.4)}
+.cat-wrap{text-align:center}
+
+/* ===== Condomínios ===== */
+.condo{
+  position:relative;background:
+    radial-gradient(700px 300px at 90% 10%, rgba(225,6,0,.25), transparent 60%),
+    linear-gradient(180deg,#0b0c0e 0%,#101114 100%);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.condo-grid{display:grid;grid-template-columns:1.05fr 1.15fr;gap:48px;align-items:center}
+.condo .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.feature{
+  display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:12px;
+  background:rgba(255,255,255,.03);border:1px solid var(--line);
+}
+.feature svg{width:22px;height:22px;color:var(--red);flex-shrink:0;margin-top:2px}
+.feature h4{margin:0 0 2px;font-size:.97rem;color:#fff;font-family:'Inter';font-weight:600}
+.feature p{margin:0;font-size:.84rem;color:var(--muted)}
+.condo-visual{
+  position:relative;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line-strong);
+  aspect-ratio:4/5;background:#000;box-shadow:var(--shadow);
+}
+.condo-visual img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.condo-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.85))}
+.condo-overlay{
+  position:absolute;left:18px;right:18px;bottom:18px;z-index:2;
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+}
+.kpi{
+  background:rgba(10,10,10,.78);border:1px solid var(--line-strong);
+  backdrop-filter:blur(10px);border-radius:12px;padding:12px;
+}
+.kpi b{display:block;color:#fff;font-size:1.2rem;font-family:'Space Grotesk'}
+.kpi span{font-size:.78rem;color:var(--muted)}
+
+/* ===== IA section ===== */
+.ia{position:relative;overflow:hidden}
+.ia .card .ico{background:linear-gradient(135deg,rgba(225,6,0,.22),rgba(0,0,0,0));}
+
+/* ===== Galeria ===== */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery a{
+  position:relative;display:block;border-radius:14px;overflow:hidden;
+  aspect-ratio:1/1;border:1px solid var(--line);background:#000;
+}
+.gallery a:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.5s transform}
+.gallery a:hover img{transform:scale(1.06)}
+.gallery a::after{
+  content:attr(data-label);position:absolute;left:14px;bottom:12px;color:#fff;font-weight:600;font-size:.9rem;
+  text-shadow:0 2px 10px rgba(0,0,0,.7);
+}
+.gallery a::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.75))}
+
+/* ===== Depoimentos ===== */
+.quote{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;display:flex;flex-direction:column;gap:14px;
+}
+.quote p{color:#e9eaec;font-size:1rem;margin:0}
+.quote .who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(135deg,var(--red),#5b0200);
+  display:grid;place-items:center;color:#fff;font-weight:700;
+}
+.who b{display:block;color:#fff;font-size:.92rem}
+.who span{color:var(--muted);font-size:.8rem}
+.stars{color:#ffce4d;letter-spacing:2px}
+
+/* ===== Áreas atendidas ===== */
+.areas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:8px}
+.areas span{
+  padding:10px 16px;border-radius:999px;background:var(--panel);
+  border:1px solid var(--line);color:#fff;font-size:.9rem;font-weight:500;
+}
+.areas span svg{width:14px;height:14px;color:var(--red);margin-right:6px;vertical-align:-2px}
+
+/* ===== CTA band ===== */
+.cta-band{
+  position:relative;overflow:hidden;border-radius:var(--radius-lg);
+  padding:46px;
+  background:
+    radial-gradient(600px 280px at 90% -20%, rgba(255,255,255,.15), transparent 60%),
+    linear-gradient(135deg,var(--red) 0%, #7a0300 100%);
+  display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  box-shadow:0 30px 60px rgba(225,6,0,.35);
+}
+.cta-band h2{color:#fff;margin:0 0 6px;font-size:clamp(1.4rem,2.4vw,2rem)}
+.cta-band p{color:rgba(255,255,255,.85);margin:0;max-width:560px}
+.cta-band .btn-wa{background:#fff;color:#0a0a0a}
+.cta-band .btn-wa:hover{background:#f3f3f3}
+
+/* ===== Footer ===== */
+.footer{background:#070707;border-top:1px solid var(--line);padding:64px 0 24px;color:var(--muted);font-size:.92rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px}
+.footer h4{color:#fff;font-size:.95rem;margin:0 0 14px;font-family:'Inter';font-weight:600;letter-spacing:.03em}
+.footer a{color:var(--muted);display:inline-flex;align-items:center;gap:8px;margin-bottom:8px}
+.footer a:hover{color:#fff}
+.footer ul{list-style:none;padding:0;margin:0}
+.footer ul li{margin-bottom:8px}
+.footer .map{
+  border-radius:14px;overflow:hidden;border:1px solid var(--line);height:170px;background:#000;
+}
+.footer .map iframe{width:100%;height:100%;border:0;filter:grayscale(.4) invert(.92) hue-rotate(180deg)}
+.footer-bottom{
+  margin-top:42px;padding-top:20px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:.84rem;
+}
+.socials{display:flex;gap:8px}
+.socials a{
+  width:38px;height:38px;border-radius:10px;background:var(--panel);border:1px solid var(--line);
+  display:grid;place-items:center;color:#fff;
+}
+.socials a:hover{background:var(--red);border-color:var(--red);color:#fff}
+.socials svg{width:18px;height:18px}
+
+/* ===== Floating WhatsApp + mobile bar ===== */
+.fab{
+  position:fixed;right:18px;bottom:18px;z-index:60;
+  background:var(--wa);color:#0b1f12;
+  width:60px;height:60px;border-radius:50%;
+  display:grid;place-items:center;
+  box-shadow:0 18px 40px rgba(37,211,102,.45);
+  animation:bob 3s ease-in-out infinite;
+}
+.fab svg{width:30px;height:30px}
+@keyframes bob{50%{transform:translateY(-4px)}}
+.mobile-cta{display:none}
+
+/* ===== Reveal animations ===== */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px){
+  .nav-links{display:none}
+  .nav-cta .btn-ghost{display:none}
+  .hamburger{display:inline-flex}
+  .hero{padding:64px 0 84px}
+  .hero-inner{grid-template-columns:1fr;gap:36px}
+  .hero-visual{order:-1;aspect-ratio:16/11}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .condo-grid{grid-template-columns:1fr;gap:32px}
+  .condo .feature-list{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .gallery a:nth-child(1){grid-column:span 2;grid-row:auto;aspect-ratio:16/10}
+  .strip-row{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .footer .col-map{grid-column:span 2}
+  .section{padding:72px 0}
+  .cta-band{padding:32px;text-align:center;justify-content:center}
+  .fab{bottom:78px}
+  .mobile-cta{
+    display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:55;gap:8px;
+  }
+  .mobile-cta .btn{flex:1;justify-content:center;padding:14px 18px}
+}
+@media (max-width: 540px){
+  .grid-4,.grid-3,.grid-2{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer .col-map{grid-column:auto}
+  .areas span{font-size:.82rem;padding:8px 12px}
 }
 
-.card i{
-font-size:30px;
-color:#8b0000;
-margin-bottom:10px;
+/* ===== Mobile menu drawer ===== */
+.drawer{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:80;display:none;
 }
-
-.card:hover{
-transform:translateY(-8px) scale(1.02);
-box-shadow:0 15px 35px rgba(0,0,0,0.2);
+.drawer.open{display:block}
+.drawer-panel{
+  position:absolute;right:0;top:0;bottom:0;width:84%;max-width:340px;
+  background:#0c0d0f;border-left:1px solid var(--line);padding:22px;
+  display:flex;flex-direction:column;gap:6px;
+  transform:translateX(100%);transition:transform .3s;
 }
-
-/* CATALOG */
-
-.catalogo{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+.drawer.open .drawer-panel{transform:none}
+.drawer-panel a{
+  padding:14px 12px;border-radius:10px;color:#fff;font-weight:500;border:1px solid transparent;
 }
-
-.item{
-background:linear-gradient(145deg,#ffffff,#f1f1f1);
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-text-align:center;
-padding:20px;
-transition:transform 0.4s, box-shadow 0.4s;
-cursor:pointer;
-perspective:1000px;
-}
-
-.item:hover{
-transform:rotateX(5deg) rotateY(-5deg) scale(1.05);
-box-shadow:0 20px 40px rgba(0,0,0,0.35);
-}
-
-.item img{
-width:180px;
-margin-bottom:15px;
-transition:transform 0.4s;
-}
-
-.item:hover img{
-transform:scale(1.1);
-}
-
-/* FOOTER */
-
-footer{
-background:#222;
-color:#fff;
-text-align:center;
-padding:25px;
-}
-
-/* WHATSAPP */
-
-.whatsapp-btn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:#fff;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-font-size:18px;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
+.drawer-panel a:hover{background:rgba(255,255,255,.06)}
+.drawer-close{margin-left:auto;background:none;border:0;color:#fff;font-size:1.4rem;cursor:pointer}
 </style>
 </head>
-
 <body>
 
-<header class="hero">
-
-<div class="scan-line"></div>
-<div class="tech-lines"></div>
-<div class="tech-overlay"></div>
-
-<div class="hero-content">
-
-<h1>A.R Soluções CFTV</h1>
-
-<p>
-Instalação profissional de câmeras de segurança, alarmes e redes em Florianópolis.
-Soluções completas em CFTV para residências, empresas e condomínios.
-</p>
-
-<div class="hero-buttons">
-
-<a class="btn" href="https://wa.me/5548985060500" target="_blank">
-Solicitar Orçamento
-</a>
-
-<a class="btn-secondary" href="#servicos">
-Ver Serviços
-</a>
-
+<!-- ====== Top bar ====== -->
+<div class="topbar">
+  <div class="container">
+    <div><span class="dot"></span> Atendimento Florianópolis e região · Seg a Sáb 8h–18h</div>
+    <div>
+      <a href="tel:+5548985060500">(48) 98506-0500</a> ·
+      <a href="mailto:ar.solucoescftv@gmail.com">ar.solucoescftv@gmail.com</a>
+    </div>
+  </div>
 </div>
 
-</div>
-
+<!-- ====== Header ====== -->
+<header class="header">
+  <div class="container nav">
+    <a href="#" class="logo" aria-label="AR Soluções CFTV">
+      <span class="logo-mark"><img src="/img/logo-shield.png" alt="AR Soluções CFTV" width="44" height="44" /></span>
+      <span>AR <span style="color:var(--red)">Soluções</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#eletrica">Elétrica</a>
+      <a href="#condominios">Condomínios</a>
+      <a href="#ia">Tecnologia</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="tel:+5548985060500">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        Ligar
+      </a>
+      <a class="btn btn-primary" href="https://wa.me/5548985060500?text=Olá!%20Quero%20um%20orçamento.">Solicitar Orçamento</a>
+      <button class="hamburger" aria-label="Abrir menu" onclick="document.getElementById('drawer').classList.add('open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
 </header>
 
-<nav>
-<a href="#servicos">Serviços</a>
-<a href="#vantagens">Vantagens</a>
-<a href="#catalogo">Catálogo</a>
-<a href="#contato">Contato</a>
-<a href="https://wa.me/5548985060500">WhatsApp</a>
-</nav>
-
-<section id="empresa">
-
-<h2>Sobre a Empresa</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Experiência</h3>
-<p>Especialistas em instalação de CFTV, alarmes e redes em Florianópolis.</p>
+<!-- ====== Drawer ====== -->
+<div class="drawer" id="drawer" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="drawer-panel">
+    <button class="drawer-close" onclick="document.getElementById('drawer').classList.remove('open')" aria-label="Fechar">×</button>
+    <a href="#servicos" onclick="document.getElementById('drawer').classList.remove('open')">Serviços</a>
+    <a href="#eletrica" onclick="document.getElementById('drawer').classList.remove('open')">Elétrica</a>
+    <a href="#condominios" onclick="document.getElementById('drawer').classList.remove('open')">Condomínios</a>
+    <a href="#ia" onclick="document.getElementById('drawer').classList.remove('open')">Tecnologia & IA</a>
+    <a href="#galeria" onclick="document.getElementById('drawer').classList.remove('open')">Galeria</a>
+    <a href="#diferenciais" onclick="document.getElementById('drawer').classList.remove('open')">Diferenciais</a>
+    <a href="#contato" onclick="document.getElementById('drawer').classList.remove('open')">Contato</a>
+    <a class="btn btn-primary" style="justify-content:center;margin-top:10px" href="https://wa.me/5548985060500">WhatsApp</a>
+  </div>
 </div>
 
-<div class="card">
-<h3>Projetos Personalizados</h3>
-<p>Analisamos cada ambiente para oferecer a melhor solução em segurança.</p>
-</div>
-
-<div class="card">
-<h3>Atendimento Rápido</h3>
-<p>Instalação profissional com suporte técnico especializado.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="servicos">
-<h2>Nossos Serviços</h2>
-
-<div class="grid">
-
-<div class="card">
-<i class="fas fa-video"></i>
-<h3>Instalação de CFTV</h3>
-<p>Instalação completa de câmeras HD, Full HD e IP para residências e empresas.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-bell"></i>
-<h3>Instalação de Alarmes</h3>
-<p>Sistemas de alarme com sensores de movimento e abertura para maior segurança.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-network-wired"></i>
-<h3>Montagem de Rede</h3>
-<p>Instalação de cabos de rede, pontos de internet e organização de cabeamento.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-wifi"></i>
-<h3>Configuração de Rede</h3>
-<p>Configuração de roteadores, IP e acesso remoto para câmeras.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-tools"></i>
-<h3>Estruturas para Câmeras</h3>
-<p>Montagem de suportes e estruturas para instalação segura de câmeras.</p>
-</div>
-
-</div>
-</section>
-
-<section id="vantagens">
-  <h2>Por que escolher a A.R?</h2>
-<div class="grid">
-
-<div class="card">
-<i class="fas fa-clock" style="font-size:28px;color:#8b0000;"></i>
-<p>Atendimento rápido</p>
-</div>
-
-<div class="card">
-<i class="fas fa-shield-alt" style="font-size:28px;color:#8b0000;"></i>
-<p>Qualidade garantida</p>
-</div>
-
-<div class="card">
-<i class="fas fa-user-shield" style="font-size:28px;color:#8b0000;"></i>
-<p>Profissionais especializados</p>
-</div>
-
-<div class="card">
-<i class="fas fa-cogs" style="font-size:28px;color:#8b0000;"></i>
-<p>Projetos personalizados</p>
-</div>
-
-</div>
-
-</section> 
-
-<section id="catalogo">
-  <h2>Catálogo de Produtos</h2>
-  <div class="catalogo">
-
-    <div class="item" onclick="abrirProduto('bullet')">
-      <img src="camara bullet.jpg">
-      <h3>Câmera Bullet HD</h3>
-      <p>Visão noturna • Externa</p>
-      <a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
+<!-- ====== Hero ====== -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-scan"></div>
+  <div class="container hero-inner">
+    <div class="reveal">
+      <span class="eyebrow">Segurança eletrônica & elétrica inteligente</span>
+      <h1 style="margin-top:18px">Protegemos o que é mais importante para você com <span>tecnologia inteligente</span>.</h1>
+      <p class="hero-lede">Soluções completas em CFTV, alarmes, controle de acesso, redes, automação e instalações elétricas para residências, empresas e condomínios em Florianópolis e região.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://wa.me/5548985060500?text=Olá!%20Quero%20solicitar%20um%20orçamento.">
+          Solicitar Orçamento
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn btn-wa" href="https://wa.me/5548985060500" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> +10 anos de experiência</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Atendimento rápido</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Garantia em todos os serviços</div>
+      </div>
     </div>
-
-    <div class="item" onclick="abrirProduto('domi')">
-      <img src="camara domi.png">
-      <h3>Câmera Domo</h3>
-      <p>Design discreto • Interna • Externa</p>
-      <a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
+    <div class="hero-visual reveal">
+      <img src="img/hero-cameras.jpg" alt="Câmeras de segurança CFTV instaladas em ambiente residencial" loading="eager" decoding="async" />
+      <div class="hero-chip c1"><span class="live"></span> Monitoramento ao vivo</div>
+      <div class="hero-chip c2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12c2.5-5 7-7 10-7s7.5 2 10 7c-2.5 5-7 7-10 7s-7.5-2-10-7z"/></svg>
+        Reconhecimento por IA
+      </div>
     </div>
-
-    <div class="item" onclick="abrirProduto('dvr')">
-      <img src="dvr.jpg">
-      <h3>DVR / NVR</h3>
-      <p>Acesso remoto</p>
-    <a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
-    </div>
-
-    <div class="item" onclick="abrirProduto('cftv')">
-      <img src="kit cftv.jpg">
-      <h3>Kit CFTV</h3>
-      <p>Completo</p>
-     <a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
-    </div>
-
-    <div class="item" onclick="abrirProduto('alarme')">
-      <img src="alarme.jpg">
-      <h3>Sistema de Alarme</h3>
-      <p>Sensores • Sirene</p>
-     <a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
-    </div>
-
-    <div class="item" onclick="abrirProduto('rede')">
-
-<img src="rede.jpeg">
-<h3>Infraestrutura de Rede</h3>
-<p>Cabeamento estruturado</p>
-<a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
-</div>
-
-<div class="item" onclick="abrirProduto('rack')">
-<img src="rack.jpg">
-<h3>Montagem de Rack</h3>
-<p>Organização profissional</p>
-<a href="https://wa.me/5548985060500">Solicitar no WhatsApp</a>
-</div>
-
   </div>
 </section>
 
-<section>
-<h2>Tipos de Instalação</h2>
-
-<div class="grid">
-
-<div class="card">
-📷 Instalação de CFTV em residências
+<!-- ====== Trust strip ====== -->
+<div class="strip">
+  <div class="container strip-row">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <strong>+500</strong>&nbsp;projetos entregues</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Resposta em <strong>até 1h</strong></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21V12h6v9"/></svg> Residências, empresas e <strong>condomínios</strong></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> Florianópolis e <strong>Grande Floripa</strong></div>
+  </div>
 </div>
 
-<div class="card">
-🏢 Instalação de câmeras em empresas
-</div>
+<!-- ====== Serviços ====== -->
+<section class="section" id="servicos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nossos Serviços</span>
+      <h2 style="margin-top:14px">Soluções completas em segurança eletrônica e elétrica</h2>
+      <p>Da câmera ao quadro de luz: projetamos, instalamos e damos manutenção. Toda a infraestrutura da sua propriedade entregue por uma única equipe especializada.</p>
+    </div>
 
-<div class="card">
-🌐 Montagem de rede e cabeamento
-</div>
+    <div class="cat-wrap reveal">
+      <div class="cat-tabs" role="tablist">
+        <button class="active" data-cat="all">Todos</button>
+        <button data-cat="cftv">Segurança & CFTV</button>
+        <button data-cat="elec">Elétrica</button>
+      </div>
+    </div>
 
-<div class="card">
-⚙ Configuração de câmeras IP
-</div>
+    <div class="grid grid-4" id="services-grid">
 
-<div class="card">
-🚨 Instalação de sistemas de alarme
-</div>
+      <article class="card cftv reveal" data-cat="cftv">
+        <span class="tag">CFTV</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h13l4 4v6H2z"/><circle cx="8.5" cy="13" r="2.5"/><path d="M19 7l3-2v10l-3-2"/></svg></div>
+        <h3>CFTV & Monitoramento</h3>
+        <p>Câmeras HD, Full HD e IP com visão noturna, acesso remoto pelo celular e gravação 24h.</p>
+      </article>
 
-<div class="card">
-🛠 Montagem de estruturas para câmeras
-</div>
+      <article class="card cftv reveal" data-cat="cftv">
+        <span class="tag">Segurança</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></div>
+        <h3>Alarmes Residenciais e Empresariais</h3>
+        <p>Centrais com sensores de movimento, abertura e sirene, com notificação no celular.</p>
+      </article>
 
-</div>
+      <article class="card cftv reveal" data-cat="cftv">
+        <span class="tag">Acesso</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3>Controle de Acesso</h3>
+        <p>Biometria, tags, QR Code, fechaduras digitais e catracas para residências, empresas e prédios.</p>
+      </article>
+
+      <article class="card cftv reveal" data-cat="cftv">
+        <span class="tag">Rede</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="14" width="20" height="8" rx="2"/><rect x="2" y="2" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg></div>
+        <h3>Redes e Infraestrutura</h3>
+        <p>Cabeamento estruturado, racks organizados, Wi-Fi de alta cobertura e fibra óptica.</p>
+      </article>
+
+      <article class="card cftv reveal" data-cat="cftv">
+        <span class="tag">Interfonia</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M10 18h4"/><circle cx="12" cy="7" r="2"/></svg></div>
+        <h3>Interfonia & Vídeo Porteiro</h3>
+        <p>Vídeo porteiros HD com atendimento pelo celular de qualquer lugar.</p>
+      </article>
+
+      <article class="card cftv reveal" data-cat="cftv">
+        <span class="tag">Portaria</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+        <h3>Portaria Remota</h3>
+        <p>Atendimento 24h por equipe especializada, com redução de custos para o condomínio.</p>
+      </article>
+
+      <article class="card cftv reveal" data-cat="cftv">
+        <span class="tag">Cerca</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l4-5 4 5v13M13 21V8l4-5 4 5v13"/><path d="M3 12h18M3 16h18"/></svg></div>
+        <h3>Cerca Elétrica</h3>
+        <p>Instalação, manutenção e integração da cerca elétrica ao sistema de alarme.</p>
+      </article>
+
+      <article class="card cftv reveal" data-cat="cftv">
+        <span class="tag">Automação</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Automação Residencial</h3>
+        <p>Controle de portões, luzes, cortinas e cenas pelo celular ou comando de voz.</p>
+      </article>
+
+      <!-- Elétrica -->
+      <article class="card elec reveal" data-cat="elec" id="eletrica">
+        <span class="tag">Elétrica</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+        <h3>Instalações Elétricas Residenciais</h3>
+        <p>Projetos completos, quadros, tomadas, iluminação e aterramento conforme NBR 5410.</p>
+      </article>
+
+      <article class="card elec reveal" data-cat="elec">
+        <span class="tag">Elétrica</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Instalações Elétricas Comerciais</h3>
+        <p>Lojas, escritórios, indústrias e galpões com dimensionamento adequado e segurança.</p>
+      </article>
+
+      <article class="card elec reveal" data-cat="elec">
+        <span class="tag">Elétrica</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 1 0 5.6L8.5 18a4 4 0 1 1-5.6-5.6l6.2-6.2a4 4 0 0 1 5.6 0z"/><path d="M21 3l-6 6"/></svg></div>
+        <h3>Manutenção Elétrica</h3>
+        <p>Diagnóstico, reparo e modernização de instalações antigas com segurança total.</p>
+      </article>
+
+      <article class="card elec reveal" data-cat="elec">
+        <span class="tag">Elétrica</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>
+        <h3>Quadros & Painéis Elétricos</h3>
+        <p>Montagem, organização e padronização de quadros de distribuição e comando.</p>
+      </article>
+
+      <article class="card elec reveal" data-cat="elec">
+        <span class="tag">Elétrica</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Manutenção Preventiva</h3>
+        <p>Contratos para empresas e condomínios com inspeções programadas e relatórios.</p>
+      </article>
+
+      <article class="card elec reveal" data-cat="elec">
+        <span class="tag">Elétrica</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg></div>
+        <h3>Iluminação Inteligente</h3>
+        <p>LED, fitas, dimmers e cenários inteligentes integrados à automação.</p>
+      </article>
+
+      <article class="card elec reveal" data-cat="elec">
+        <span class="tag">Elétrica</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+        <h3>Laudos & Adequações</h3>
+        <p>Vistorias, laudos técnicos e adequações para emissão de habite-se e seguros.</p>
+      </article>
+
+    </div>
+  </div>
 </section>
 
-<section id="contato">
-  <h2>Contato</h2>
-  <p>Email: ar.solucionescftv@gmail.com</p>
-  <p>Telefone: (48) 98506-0500</p>
-  <p>Florianópolis - SC</p>
+<!-- ====== Soluções para Condomínios ====== -->
+<section class="section condo" id="condominios">
+  <div class="container condo-grid">
+    <div class="reveal">
+      <span class="eyebrow">Soluções para Condomínios</span>
+      <h2 style="margin-top:14px">Segurança, tecnologia e elétrica integradas para o seu condomínio.</h2>
+      <p>Reduzimos custos operacionais e aumentamos a segurança com sistemas integrados de monitoramento, acesso, portaria remota, redes e manutenção elétrica preventiva — tudo gerenciado pelo aplicativo.</p>
 
-  <p>
-<a class="btn" href="https://wa.me/5548985060500">
-Falar no WhatsApp
-</a>
-</p>
+      <div class="feature-list">
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h13l4 4v6H2z"/><circle cx="8.5" cy="13" r="2.5"/></svg>
+          <div><h4>Monitoramento de áreas comuns</h4><p>Câmeras IP em hall, garagem, playground e elevadores.</p></div>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <div><h4>Controle de acesso</h4><p>Moradores, visitantes e prestadores com biometria, tag ou QR Code.</p></div>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+          <div><h4>Portaria remota 24h</h4><p>Atendimento por equipe especializada com redução de custos.</p></div>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="14" width="20" height="8" rx="2"/><rect x="2" y="2" width="20" height="8" rx="2"/></svg>
+          <div><h4>Redes e infraestrutura</h4><p>Cabeamento estruturado, racks e Wi-Fi para áreas comuns.</p></div>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+          <div><h4>Serviços elétricos</h4><p>Quadros, iluminação, geradores e manutenção preventiva.</p></div>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="7" r="2"/></svg>
+          <div><h4>Vídeo porteiro & interfonia</h4><p>Atendimento pelo app, com chamada direta ao apartamento.</p></div>
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://wa.me/5548985060500?text=Olá!%20Sou%20síndico(a)%20e%20quero%20um%20projeto%20para%20o%20condomínio.">Projeto para meu condomínio</a>
+        <a class="btn btn-ghost" href="#contato">Falar com um consultor</a>
+      </div>
+    </div>
+
+    <div class="condo-visual reveal">
+      <img src="img/rede.jpg" alt="Infraestrutura de rede e CFTV instalada em condomínio" loading="lazy" decoding="async"/>
+      <div class="condo-overlay">
+        <div class="kpi"><b>-35%</b><span>custo com portaria</span></div>
+        <div class="kpi"><b>24/7</b><span>monitoramento ativo</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>
-  © 2026 - A.R Soluções CFTV
+<!-- ====== IA & Monitoramento Inteligente ====== -->
+<section class="section section--alt ia" id="ia">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Tecnologia & IA</span>
+      <h2 style="margin-top:14px">Monitoramento inteligente com Inteligência Artificial</h2>
+      <p>Câmeras que reconhecem pessoas, veículos e comportamentos suspeitos. Alertas em tempo real no seu celular e integração total com automação e alarmes.</p>
+    </div>
+
+    <div class="grid grid-4">
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12c2.5-5 7-7 10-7s7.5 2 10 7c-2.5 5-7 7-10 7s-7.5-2-10-7z"/></svg></div>
+        <h3>Reconhecimento por IA</h3>
+        <p>Detecção de pessoas, veículos e placas reduzindo alarmes falsos.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
+        <h3>Tudo no seu celular</h3>
+        <p>Visualize câmeras, abra portões e receba alertas em qualquer lugar.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Integração & automação</h3>
+        <p>Cenários que ligam luzes, alarmes e câmeras automaticamente.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 3v9h9"/></svg></div>
+        <h3>Gravação em nuvem</h3>
+        <p>Acesso a gravações mesmo em caso de roubo ou falha de energia.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Diferenciais ====== -->
+<section class="section" id="diferenciais">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por que escolher a AR</span>
+      <h2 style="margin-top:14px">Tecnologia de ponta com atendimento humano</h2>
+      <p>Mais de uma década entregando projetos sob medida — do orçamento à manutenção, com transparência e garantia.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Atendimento rápido</h3><p>Resposta no mesmo dia e agenda flexível para emergências.</p></article>
+      <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Garantia em todos os serviços</h3><p>Cobertura em mão de obra e equipamentos instalados.</p></article>
+      <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div><h3>Equipe qualificada</h3><p>Técnicos certificados e em constante capacitação.</p></article>
+      <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 1 0 5.6L8.5 18a4 4 0 1 1-5.6-5.6l6.2-6.2a4 4 0 0 1 5.6 0z"/></svg></div><h3>Suporte técnico</h3><p>Pós-venda dedicado, com canais diretos via WhatsApp.</p></article>
+      <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>Soluções personalizadas</h3><p>Projeto sob medida para cada ambiente e orçamento.</p></article>
+      <article class="card reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg></div><h3>Integração com app</h3><p>Controle e monitore tudo direto pelo seu celular.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Galeria ====== -->
+<section class="section section--alt" id="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Projetos concluídos</span>
+      <h2 style="margin-top:14px">Galeria de instalações</h2>
+      <p>Veja alguns dos nossos projetos de CFTV, redes, painéis elétricos e controle de acesso entregues.</p>
+    </div>
+    <div class="gallery reveal">
+      <a href="img/hero-cameras.jpg" data-label="Câmeras de segurança" target="_blank"><img src="img/hero-cameras.jpg" alt="Câmeras de segurança" loading="lazy"/></a>
+      <a href="img/rack.jpg" data-label="Rack de rede" target="_blank"><img src="img/rack.jpg" alt="Rack de rede organizado" loading="lazy"/></a>
+      <a href="img/rede.jpg" data-label="Cabeamento estruturado" target="_blank"><img src="img/rede.jpg" alt="Cabeamento estruturado" loading="lazy"/></a>
+      <a href="img/dvr.jpg" data-label="DVR / NVR" target="_blank"><img src="img/dvr.jpg" alt="DVR para CFTV" loading="lazy"/></a>
+      <a href="img/camera-bullet.jpg" data-label="Câmera Bullet" target="_blank"><img src="img/camera-bullet.jpg" alt="Câmera bullet" loading="lazy"/></a>
+      <a href="img/camera-domo.png" data-label="Câmera Domo" target="_blank"><img src="img/camera-domo.png" alt="Câmera domo" loading="lazy"/></a>
+      <a href="img/alarme.jpg" data-label="Sistema de alarme" target="_blank"><img src="img/alarme.jpg" alt="Sistema de alarme" loading="lazy"/></a>
+      <a href="img/kit-cftv.jpg" data-label="Kit CFTV" target="_blank"><img src="img/kit-cftv.jpg" alt="Kit CFTV completo" loading="lazy"/></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Depoimentos ====== -->
+<section class="section" id="depoimentos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Depoimentos</span>
+      <h2 style="margin-top:14px">O que dizem nossos clientes</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Instalaram CFTV e refizeram toda a parte elétrica do meu comércio. Equipe pontual, organizada e preço justo."</p>
+        <div class="who"><div class="avatar">MR</div><div><b>Marcos R.</b><span>Comércio · Florianópolis</span></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Modernizaram a portaria e o controle de acesso do nosso condomínio. Reduzimos custo e ganhamos em segurança."</p>
+        <div class="who"><div class="avatar">AS</div><div><b>Ana S.</b><span>Síndica · São José</span></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Atendimento rápido, projeto bem feito e integração com o celular funcionando perfeitamente. Recomendo!"</p>
+        <div class="who"><div class="avatar">JL</div><div><b>João L.</b><span>Residência · Palhoça</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Áreas de atendimento ====== -->
+<section class="section section--alt" id="areas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Onde atendemos</span>
+      <h2 style="margin-top:14px">Florianópolis e toda a Grande Florianópolis</h2>
+      <p>Equipes técnicas locais com deslocamento rápido em toda a região metropolitana.</p>
+    </div>
+    <div class="areas reveal">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Florianópolis</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/></svg>São José</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/></svg>Palhoça</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/></svg>Biguaçu</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/></svg>Santo Amaro</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/></svg>Governador Celso Ramos</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/></svg>Antônio Carlos</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA band ====== -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Pronto para proteger o que importa?</h2>
+        <p>Solicite um orçamento sem compromisso. Resposta rápida pelo WhatsApp.</p>
+      </div>
+      <a class="btn btn-wa" href="https://wa.me/5548985060500?text=Olá!%20Quero%20um%20orçamento.">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Footer ====== -->
+<footer class="footer" id="contato">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px">
+          <span class="logo-mark"><img src="/img/logo-shield.png" alt="AR Soluções CFTV" width="44" height="44" /></span>
+          <span>AR <span style="color:var(--red)">Soluções</span></span>
+        </div>
+        <p style="margin-bottom:14px">Tecnologia em segurança eletrônica, redes e instalações elétricas para residências, empresas e condomínios em Florianópolis e região.</p>
+        <div class="socials">
+          <a href="https://wa.me/5548985060500" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg></a>
+          <a href="https://instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12H16l-.4 3h-2.6v7A10 10 0 0 0 22 12z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">CFTV & Monitoramento</a></li>
+          <li><a href="#servicos">Alarmes</a></li>
+          <li><a href="#servicos">Controle de Acesso</a></li>
+          <li><a href="#eletrica">Instalações Elétricas</a></li>
+          <li><a href="#condominios">Condomínios</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5548985060500"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg> (48) 98506-0500</a></li>
+          <li><a href="tel:+5548985060500"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg> Ligar agora</a></li>
+          <li><a href="mailto:ar.solucoescftv@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg> ar.solucoescftv@gmail.com</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Seg–Sáb · 8h–18h</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/></svg> Florianópolis – SC</li>
+        </ul>
+      </div>
+
+      <div class="col-map">
+        <h4>Localização</h4>
+        <div class="map">
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Florianópolis" src="https://www.google.com/maps?q=Florian%C3%B3polis%20SC&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© <span id="y"></span> AR Soluções CFTV · Todos os direitos reservados</div>
+      <div>CNPJ sob consulta · Florianópolis – SC</div>
+    </div>
+  </div>
 </footer>
 
-<a class="whatsapp-btn" href="https://wa.me/5548985060500">💬 WhatsApp</a>
-
-<script>
-
-window.onclick = function(event){
-const modal = document.getElementById("produtoModal");
-if(event.target === modal){
-modal.style.display="none";
-}
-}    
-
-function abrirProduto(tipo){
-
-let img = document.getElementById("produtoImg")
-let titulo = document.getElementById("produtoTitulo")
-let desc = document.getElementById("produtoDesc")
-
-if(tipo==="bullet"){
-img.src="camara bullet.jpg"
-titulo.innerText="Câmera Bullet HD"
-desc.innerText="Sistema profissional de vigilância com visão noturna e alta definição. Ideal para proteção de residências, empresas e estacionamentos."
-}
-
-if(tipo==="domi"){
-img.src="camara domi.png"
-titulo.innerText="Câmera Domo"
-desc.innerText="Câmera discreta com alta qualidade de imagem e excelente desempenho em ambientes internos e externos."
-}
-
-if(tipo==="dvr"){
-img.src="dvr.jpg"
-titulo.innerText="DVR / NVR"
-desc.innerText="Gravador digital para câmeras de segurança com acesso remoto pelo celular."
-}
-
-if(tipo==="cftv"){
-img.src="kit cftv.jpg"
-titulo.innerText="Kit CFTV Completo"
-desc.innerText="Sistema completo de segurança com câmeras, DVR, cabos e fonte de alimentação."
-}
-
-if(tipo==="alarme"){
-img.src="alarme.jpg"
-titulo.innerText="Sistema de Alarme"
-desc.innerText="Sistema de proteção com sensores de movimento, abertura e sirene de alta potência."
-}
-
-if(tipo==="rede"){
-img.src="rede.jpeg"
-titulo.innerText="Infraestrutura de Rede"
-desc.innerText="Instalação profissional de cabeamento estruturado, pontos de rede, patch panel e organização de cabos para empresas e residências."
-}
-
-if(tipo==="rack"){
-img.src="rack.jpg"
-titulo.innerText="Montagem de Rack"
-desc.innerText="Montagem e organização de racks de rede com patch panel, switch, DVR/NVR e gerenciamento profissional de cabos."
-}
-
-document.getElementById("produtoModal").style.display="block"
-}
-
-function fecharProduto(){
-document.getElementById("produtoModal").style.display="none"
-}
-
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", () => {
-  const trigger = window.innerHeight * 0.85;
-
-  cards.forEach(card => {
-    const top = card.getBoundingClientRect().top;
-
-    if(top < trigger){
-      card.style.opacity = "1";
-      card.style.transform = "translateY(0)";
-    }
-  });
-});
-
-</script>
-
-<div id="produtoModal" class="modal">
-
-<div class="modal-box">
-
-<span class="close" onclick="fecharProduto()">✖</span>
-
-<img id="produtoImg">
-
-<h2 id="produtoTitulo"></h2>
-
-<p id="produtoDesc"></p>
-
-<a class="btn" href="https://wa.me/5548985060500">
-Solicitar Orçamento
+<!-- Floating WhatsApp -->
+<a class="fab" href="https://wa.me/5548985060500" aria-label="Fale conosco no WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
 </a>
 
+<!-- Mobile CTA bar -->
+<div class="mobile-cta">
+  <a class="btn btn-dark" href="tel:+5548985060500">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+    Ligar
+  </a>
+  <a class="btn btn-primary" href="https://wa.me/5548985060500">Orçamento</a>
 </div>
 
-</div>
+<script>
+// year
+document.getElementById('y').textContent = new Date().getFullYear();
 
+// reveal on scroll
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// services filter
+const tabs = document.querySelectorAll('.cat-tabs button');
+tabs.forEach(b => b.addEventListener('click', () => {
+  tabs.forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  const cat = b.dataset.cat;
+  document.querySelectorAll('#services-grid .card').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+  });
+}));
+
+// card hover spotlight
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', ((e.clientX - r.left)/r.width*100) + '%');
+  });
+});
+</script>
 </body>
 </html>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://arsolucoescftv.com.br/</loc>
-<priority>1.0</priority>
-</url>
-
+  <url><loc>https://www.arsolucoescftv.com.br/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.arsolucoescftv.com.br/#servicos</loc><priority>0.9</priority></url>
+  <url><loc>https://www.arsolucoescftv.com.br/#eletrica</loc><priority>0.9</priority></url>
+  <url><loc>https://www.arsolucoescftv.com.br/#condominios</loc><priority>0.9</priority></url>
+  <url><loc>https://www.arsolucoescftv.com.br/#ia</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arsolucoescftv.com.br/#galeria</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arsolucoescftv.com.br/#contato</loc><priority>0.8</priority></url>
 </urlset>
